@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function() {
 
-Route::get('home', 'HomeController@index');
+	// Just a simple page to explain the API.
+	return View::make('home');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+});
+
+/* API Routes */
+/* Format for all API URLs: /object/ (RESTFUL REQUESTS) */
+Route::post('/login_token', 'APIController@postLoginToken');
+Route::post('/register', 'APIController@postRegister');
