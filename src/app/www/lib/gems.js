@@ -66,20 +66,3 @@ gems = new (function(_win) {
 
 	};
 })(window);
-
-Gem = (function gems(Function) {
-	var gem_id = 0;
-	Function.prototype.gem_ids = {};
-	function Gem() {
-		var _id = gem_id++;
-		var _properties = {};
-
-		var __constructor__() {
-
-		};
-
-		__constructor__();
-	};
-
-
-})(Function);
